@@ -1,0 +1,6 @@
+# OS X garbage files
+.DS_Store
+._*
+
+node_modules/
+
