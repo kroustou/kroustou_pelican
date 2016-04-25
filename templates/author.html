@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <!-- Page Header -->
+    {% for author, articles in authors|sort %}
+        <div class="post-preview">
+            {% for article in articles %}
+            <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark">
+                <h2 class="post-title">
+                    {{ article.title }}
+                </h2>
+            </a>
+            {% endfor %}
+        </div>
+        <hr>
+    {% endfor %}
+{% endblock content %}
