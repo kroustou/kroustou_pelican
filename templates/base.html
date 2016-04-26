@@ -40,19 +40,31 @@
         {% endblock opengraph %}
 
         <title>{{ SITENAME }} | {{ page_name or article.title }}</title>
-
+     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/screen.css">
         <link href='https://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'>
         <link rel="shortcut icon" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/favicon.ico" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
         {% endblock head %}
     </head>
     <body>
-        <div class="col-md-12 header">
-            <h1>{{ SITENAME }}</h1>
-            <span class="subtitle">{{ DESCRIPTION }}</span>
-        </div>
-        <div class="container" id="content">
-             <div class="col-md-8">{% block content %}asdasd{% endblock content %}</div>
-        </div>
+            <header class="col-md-12 header">
+                <h1 class="title"><a href="/">{{ SITENAME }}</a></h1>
+                <span class="subtitle">{{ DESCRIPTION }}</span>
+            </header>
+            <div class="container" id="content">
+                 <div class="col-md-8">{% block content %}{% endblock content %}</div>
+                <div class="col-md-4">
+                    <div class="col-md-4 links">
+                        <a target="_blank" href="{{ GITHUB_URL }}"><i class="fa fa-github"></i></a> <a target="_blank" href="{{ TWITTER_URL }}" class=""><i class="fa fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+
+
+            {% block pagination %}
+            {% endblock pagination %}
+        <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+        <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/pagination.js"></script>
     </body>
 </html>
