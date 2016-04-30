@@ -52,11 +52,13 @@
                 <h1 class="title"><a href="/">{{ SITENAME }}</a></h1>
                 <span class="subtitle">{{ DESCRIPTION }}</span>
             </header>
-            <div class="container" id="content">
-                 <div class="col-md-8">{% block content %}{% endblock content %}</div>
-                <div class="col-md-4">
-                    <div class="col-md-4 links">
-                        <a target="_blank" href="{{ GITHUB_URL }}"><i class="fa fa-github"></i></a> <a target="_blank" href="{{ TWITTER_URL }}" class=""><i class="fa fa-twitter"></i></a>
+            <div class="col-md-12">
+                <div class="container" id="content">
+                     <div class="col-md-8">{% block content %}{% endblock content %}</div>
+                    <div class="col-md-4">
+                        <div class="col-md-4 links">
+                            <a target="_blank" href="{{ GITHUB_URL }}"><i class="fa fa-github"></i></a> <a target="_blank" href="{{ TWITTER_URL }}" class=""><i class="fa fa-twitter"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
